@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,7 +72,7 @@
 
           <li><a href="questions.php">FAQ</a></li>
           <li><a href="contact.php">Contact</a></li>
-          <li><a href="login.php">Login</a></li>
+          <li><a href="logout.php">Logout</a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

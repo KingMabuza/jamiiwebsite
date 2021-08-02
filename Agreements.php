@@ -1,3 +1,15 @@
+
+<?php
+
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -60,7 +72,7 @@
                     <li><a href="services.php">Networking opportunities</a></li>
                     <li><a href="questions.php" class="active">FAQ</a></li>
                     <li><a href="contact.php">Contact</a></li>
-                    <li><a href="login.php">Login</a></li>
+                    <li><a href="logout.php">Logout</a></li>
 
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -114,19 +126,19 @@
             </div>
 
             <div class="section scrollspy">
-                <h3> Ragional Blocs</h3>
+                <h3> Regional Blocs</h3>
                 <hr />
                 <div class="tab">
                     <button class="tablinks" onclick="openTab(event, 'Regional integration in Africa')"
                         id="defaultOpen">Regional integration in Africa
                     </button>
-                    <button class="tablinks" onclick="openTab(event, 'COMESA')">COMESA</button>
-                    <button class="tablinks" onclick="openTab(event, 'EAC')">EAC</button>
-                    <button class="tablinks" onclick="openTab(event, 'SADC')">SADC</button>
-                    <button class="tablinks" onclick="openTab(event, 'SACU')">SACU</button>
-                    <button class="tablinks" onclick="openTab(event, 'TFTA')">TFTA</button>
-                    <button class="tablinks" onclick="openTab(event, 'AfCFTA')">AfCFTA</button>
-                    <button class="tablinks" onclick="openTab(event, 'African Union resources')">African Union
+                    <button class="tablinks button2 " onclick="openTab(event, 'COMESA')">COMESA</button>
+                    <button class="tablinks button2" onclick="openTab(event, 'EAC')">EAC</button>
+                    <button class="tablinks button2" onclick="openTab(event, 'SADC')">SADC</button>
+                    <button class="tablinks button2" onclick="openTab(event, 'SACU')">SACU</button>
+                    <button class="tablinks button2" onclick="openTab(event, 'TFTA')">TFTA</button>
+                    <button class="tablinks button2" onclick="openTab(event, 'AfCFTA')">AfCFTA</button>
+                    <button class="tablinks button2" onclick="openTab(event, 'African Union resources')">African Union
                         resources</button>
                     <button class="tablinks" onclick="openTab(event, 'Africas external relations')">Africas external
                         relations</button>
@@ -135,7 +147,7 @@
                 <div id="Regional integration in Africa" class="tabcontent">
 
                     <h3>Regional integration in Africa</h3>
-                    <p><a href=""><img
+                    <p><a href="afcfta.php"><img
                                 src="https://github.com/AfCFTA/images/blob/main/map_Africa_REC_overlay.png?raw=true"
                                 width="100" height="140">
                         </a>
@@ -457,7 +469,7 @@
                                 <p><a href="">Somalia</a></p>
                             </li>
                             <li>
-                                <p><a href="">South Africa</a></p>
+                                <p><a href="rsa.php">South Africa</a></p>
                             </li>
                             <li>
                                 <p><a href="">South Sudan</a></p>
