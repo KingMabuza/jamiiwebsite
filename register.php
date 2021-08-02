@@ -7,7 +7,7 @@ error_reporting(0);
 session_start();
 
 if (isset($_SESSION['username'])) {
-    header("Location: welcome.php");
+    header("Location: login.php");
 }
 
 if (isset($_POST['submit'])) {
